@@ -20,16 +20,28 @@ public class RabbitController {
     @Autowired
     private TopicService topicService;
 
+    /**
+     * 指定队列名称传输
+     */
     @GetMapping(value = "/rbSend")
     public void setRabbitTemplate () {
         sender.send();
     }
 
+    /**
+     * 交换机和队列绑定
+     */
     @GetMapping(value = "/fanoutSend")
     public void fanoutSend () {
         fanoutService.fanoutSend();
     }
 
+    /**
+     * topic交换机模式 在默认的基础上再添加一层过滤筛选
+     * *：匹配单个字母或数字
+     * #：匹配多个字母或数字
+     * 常用的命名规则 agents.123 匹配agents.#
+     */
     @GetMapping(value = "/topicSend")
     public void topicSend () {
         topicService.topicSend();

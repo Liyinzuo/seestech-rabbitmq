@@ -16,21 +16,6 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		/*logger.info("进入测试了没有阿");
-		ConnectionFactory factory = new ConnectionFactory();
-		factory.setHost("192.168.1.18");
-		try {
-			Connection connection = factory.newConnection();
-			logger.info("尝试连接");
-			Channel channel = connection.createChannel();
-			logger.info("创建通道");
-			channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-			String message = "Hello World!";
-			channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-			logger.info(" [x] Sent '" + message + "'");
-		} catch (Exception e) {
-
-		}*/
 
 	}
 

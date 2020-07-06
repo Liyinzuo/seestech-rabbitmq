@@ -46,6 +46,7 @@ public class TopicConfig {
      */
     @Bean
     public Binding topicBindingJ() {
+        //Binding b = BindingBuilder.bind(someQueue).to(someTopicExchange).with("foo.*");
         return BindingBuilder.bind(topicAgentsWithJiangsu()).to(topicExchange()).with("js.*");
     }
 
