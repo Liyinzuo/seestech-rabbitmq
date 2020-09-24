@@ -18,6 +18,7 @@ public class TopicConfig {
      */
     @Bean
     public Queue topicAgentsWithShanghai() {
+        System.err.println("构建测试");
         return new Queue("topicAgentsS");
     }
 
